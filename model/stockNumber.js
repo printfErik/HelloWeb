@@ -1,4 +1,4 @@
-const {Sequelize, DataTypes, MOdel} = require("sequelize");
+const {Sequelize, DataTypes, Model} = require("sequelize");
 
 const sequelize = new Sequelize(
     'hxyjDevDB',
@@ -34,4 +34,5 @@ const sequelize = new Sequelize(
     modelName: "StockNumber"
  });
 
-console.log(User === sequelize.models.User);
+//console.log(User === sequelize.models.User);
+export default StockNumberModel

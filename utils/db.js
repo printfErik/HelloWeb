@@ -1,11 +1,11 @@
 let mysql = require('mysql');
 
 var pool = mysql.createPool({
-    host: 'localhost',
+    host: '47.104.242.213',
     port: 3306,
     database: 'hxyjDevDB',
     user: 'root',
-    password: 'sql927hxzjZB183!*#'
+    password: '927hxzjZB183!*#'
 })
 
 function query(sql, callback) {

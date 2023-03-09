@@ -1,14 +1,14 @@
 // koa entry point
 
-import viewRouter from './router/viewRouter'
-import { publicRouters } from './router/apiRouter';
+import { publicRouters }  from './router/apiRouter.js';
+import { router } from './router/index.js';
 
-const Koa = require('koa2');
-const cors = require('koa2-cors');
+import Koa from 'koa2'
+
+import cors from 'koa2-cors'
+
 const app = new Koa();
 const port = 5050;
-
-const router = require('/router');
 
 //app.use(router.routes(), router.allowedMethods());
 app

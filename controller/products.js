@@ -1,5 +1,5 @@
 import koaRouter from 'koa-joi-router'
-import { getProductListByGroup } from '../service/products'
+import { getProductListByGroup } from '../service/products.js'
 
 const router = koaRouter()
 

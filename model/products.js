@@ -1,11 +1,11 @@
-const {Sequelize, DataTypes, MOdel} = require("sequelize");
+import {Sequelize, DataTypes, Model} from 'sequelize';
 
 const sequelize = new Sequelize(
     'hxyjDevDB',
     'root',
-    'sql927hxzjZB183!*#',
+    '927hxzjZB183!*#',
     {
-        host: 'localhost',
+        host: '47.104.242.213',
         dialect: 'mysql'
     }
 );
@@ -62,4 +62,6 @@ const sequelize = new Sequelize(
     modelName: "products"
  });
 
-console.log(User === sequelize.models.User);
+//console.log(User === sequelize.models.User);
+
+export const productModel = new ProductModel()
