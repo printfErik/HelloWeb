@@ -1,5 +1,5 @@
 import koaRouter from 'koa-joi-router'
-import { getProductList, getProductListByGroup } from '../service/products.js'
+import { getGroupList } from '../service/groups.js'
 
 const router = koaRouter()
 
@@ -7,10 +7,10 @@ router.prefix('/api')
 
 router.route({
     method: 'get',
-    path: '/productList',
+    path: '/groupList',
     handler: async (ctx) => {
         try {
-            const res = await getProductList()
+            const res = await getGroupList()
             ctx.body = res;
         } catch (error) {
             console.log(error)
@@ -18,6 +18,7 @@ router.route({
     }
 })
 
+/*
 router.route({
     method: 'get',
     path: '/productListByType',
@@ -27,5 +28,5 @@ router.route({
         ctx.body = res
     }
 })
-
+*/
 export default router

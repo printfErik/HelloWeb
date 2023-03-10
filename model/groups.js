@@ -3,9 +3,9 @@ const {Sequelize, DataTypes, Model} = require("sequelize");
 const sequelize = new Sequelize(
     'hxyjDevDB',
     'root',
-    'sql927hxzjZB183!*#',
+    '927hxyjZB183!*#',
     {
-        host: 'localhost',
+        host: '47.104.242.213',
         dialect: 'mysql'
     }
 );
@@ -31,9 +31,11 @@ const sequelize = new Sequelize(
     }
  }, {
     sequelize,
-    modelName: "ProductGroup"
+    tableName: 'ProductGroup',
+    modelName: 'ProductGroup',
+    timestamps: false
  });
 
-//console.log(User === sequelize.models.User);
+await GroupModel.sync()
 
-export default GroupModel
+export default GroupModel;

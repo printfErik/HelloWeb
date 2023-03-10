@@ -3,7 +3,7 @@ import {Sequelize, DataTypes, Model} from 'sequelize';
 const sequelize = new Sequelize(
     'hxyjDevDB',
     'root',
-    '927hxzjZB183!*#',
+    '927hxyjZB183!*#',
     {
         host: '47.104.242.213',
         dialect: 'mysql'
@@ -38,7 +38,8 @@ const sequelize = new Sequelize(
         allowNull: false
     },
     stockAddressID: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.JSON,
+        defaultValue: '[]',
         allowNull: false
     },
     productStatus: {
@@ -59,9 +60,12 @@ const sequelize = new Sequelize(
     }
  }, {
     sequelize,
-    modelName: "products"
+    modelName: 'products',
+    tableName: 'products',
+    timestamps: false
  });
 
-//console.log(User === sequelize.models.User);
+ await ProductModel.sync()
 
-export const productModel = new ProductModel()
+//console.log(User === sequelize.models.User);
+export default ProductModel;

@@ -31,10 +31,11 @@ const sequelize = new Sequelize(
     }
  }, {
     sequelize,
-    modelName: "StockAddress"
+    modelName: "StockAddress",
+    tableName: "StockAddress",
+    timestamps: false
  });
 
-//console.log(User === sequelize.models.User);
-
+await StockAddressModel.sync();
 
 export default StockAddressModel

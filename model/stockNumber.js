@@ -31,8 +31,11 @@ const sequelize = new Sequelize(
     }
  }, {
     sequelize,
-    modelName: "StockNumber"
+    modelName: "StockNumber",
+    tableName: 'StockNumber',
+    timestamps: false
  });
 
-//console.log(User === sequelize.models.User);
+await StockNumberModel.sync()
+
 export default StockNumberModel
